@@ -10,7 +10,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 WORKDIR /var/www
 RUN rm -rf /var/www/html
 
-COPY .docker/entrypoint.sh /usr/local/bin/
+COPY .docker/app/entrypoint.sh /usr/local/bin/
 #COPY .docker/app/.env  /var/www/.docker/app/.env
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
