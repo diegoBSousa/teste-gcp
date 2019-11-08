@@ -8,9 +8,9 @@ steps:
   name: "gcr.io/cloud-builders/docker"
   args: ['ps']
   
-- id: "Executando compose"
+- id: "Executando composer"
   name: "gcr.io/cloud-builders/docker"
-  args: ['exec', '-t', 'app', 'compose', 'install']
+  args: ['exec', '-t', 'app', 'composer', 'install']
 
 - id: "Criando arquivo .env"
   name: "gcr.io/cloud-builders/docker"
