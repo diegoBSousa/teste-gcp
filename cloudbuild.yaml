@@ -8,3 +8,7 @@ steps:
   name: "gcr.io/cloud-builders/docker"
   args: ['ps']
   
+- id: "Executando compose"
+  name: "gcr.io/cloud-builders/docker"
+  args: ['exec', '-it', 'app', 'compose', 'install']
+  
