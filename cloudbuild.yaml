@@ -23,3 +23,7 @@ steps:
 - id: "Executando 'artisan migrate'"
   name: "gcr.io/cloud-builders/docker"
   args: ['exec', '-t', 'app', 'php', 'artisan', 'migrate']
+
+- id: "Executando testes"
+  name: "gcr.io/cloud-builders/docker"
+  args: ['exec', '-t', 'app', 'php', 'phpunit', '-c', 'phpunit.xml']
