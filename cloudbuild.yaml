@@ -19,3 +19,7 @@ steps:
 - id: "Executando 'artisan key:generate'"
   name: "gcr.io/cloud-builders/docker"
   args: ['exec', '-t', 'app', 'php', 'artisan', 'key:generate']
+
+- id: "Executando 'artisan migrate'"
+  name: "gcr.io/cloud-builders/docker"
+  args: ['exec', '-t', 'app', 'php', 'artisan', 'migrate']
